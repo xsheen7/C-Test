@@ -1,9 +1,25 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace AlgorithmsTest
 {
     public class HeapSort
     {
+        public static void Test()
+        {
+            List<int> data = new List<int>
+            {
+                1, 2, 3, 4, 5
+            };
+            HeapSort sort = new HeapSort();
+            sort.Sort(data);
+
+            for (int i = 0; i < data.Count; i++)
+            {
+                Console.WriteLine(data[i]);
+            }
+        }
+        
         public void Sort(List<int> data)
         {
             for (int i = data.Count / 2; i > 0; i--)
