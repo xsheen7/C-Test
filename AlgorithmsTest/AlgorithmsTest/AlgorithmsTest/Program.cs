@@ -11,7 +11,9 @@ namespace AlgorithmsTest
 
             // ArraySum.Test();
             // HeapSort.Test();
-            ReverseLinklist.Test();
+            //ReverseLinklist.Test();
+            
+            QuickSort.Test();
         }
 
         

@@ -11,7 +11,29 @@ namespace GenericTest
 
         static void Main(string[] args)
         {
-            Son1 son1 = new Son1();
+            TestEvent testEvent = new TestEvent();
+            testEvent.Test();
+        }
+    }
+
+    public class TestEvent
+    {
+        public event Action myEvent;
+        //public Action myEvent;
+
+        public void Test()
+        {
+            myEvent += () =>
+            {
+                Console.WriteLine("call 1");
+            };
+            myEvent += () =>
+            {
+                Console.WriteLine("call 2");
+            };
+            myEvent.Invoke();
+            myEvent = () => { };
+            myEvent.Invoke();
         }
     }
 
